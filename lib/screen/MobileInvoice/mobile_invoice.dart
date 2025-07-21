@@ -14,6 +14,12 @@ class _MobileInvoiceState extends State<MobileInvoice> {
   bool ischecked = false;
 
   @override
+  void dispose() {
+    nameContrller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
